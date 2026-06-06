@@ -15,7 +15,30 @@ bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Supabase environment setup
 
+Create a `.env.local` file with the following values:
+
+```bash
+NEXT_PUBLIC_SUPABASE_URL=<your-supabase-url>
+NEXT_PUBLIC_SUPABASE_ANON_KEY=<your-supabase-anon-key>
+```
+
+## Supabase local startup
+
+```bash
+cd "/Users/dj-kfive/Documents/community app/community app"
+supabase start
+supabase db reset --local
+```
+
+If you are using a hosted Supabase project ref:
+
+```bash
+cd "/Users/dj-kfive/Documents/community app/community app"
+supabase link --project-ref <your-project-ref>
+supabase db reset --linked
+```
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
@@ -28,6 +51,26 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Local Supabase setup
+
+This project includes Supabase migrations and seed data under `supabase/`.
+
+To start Supabase locally and reset the database with migrations and seed data:
+
+```bash
+cd "/Users/dj-kfive/Documents/community app/community app"
+supabase start
+supabase db reset --local
+```
+
+If you want to use a hosted Supabase project ref instead, run:
+
+```bash
+cd "/Users/dj-kfive/Documents/community app/community app"
+supabase link --project-ref <your-project-ref>
+supabase db reset --linked
+```
 
 ## Deploy on Vercel
 
