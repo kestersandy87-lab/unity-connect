@@ -3,4 +3,5 @@
 -- to push live updates to the frontend.
 
 -- Add the rsvps table to the supabase_realtime publication
-alter publication supabase_realtime add table rsvps;
+alter publication supabase_realtim
+e add table rsvps;
